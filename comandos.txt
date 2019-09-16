@@ -1,0 +1,8 @@
+yarn add react-router-dom
+yarn add styled-components
+yarn add react-icons
+yarn add polished
+yarn global add json-server
+
+yarn add axios
+json-server server.json -p 3333
