@@ -12,13 +12,13 @@ import { formatPrice } from '../../util/format';
 import * as CartActions from '../../store/modules/cart/actions';
 import { Container, ProductTable, Total } from './styles';
 
-function Cart({ cart, total, removeFromCart, updateAmount }) {
+function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
   function increment(product) {
-    updateAmount(product.id, product.amount + 1);
+    updateAmountRequest(product.id, product.amount + 1);
   }
 
   function decrement(product) {
-    updateAmount(product.id, product.amount - 1);
+    updateAmountRequest(product.id, product.amount - 1);
   }
   return (
     <Container>
@@ -86,7 +86,7 @@ const mapStateToProps = state => ({
   })),
   total: formatPrice(
     state.cart.reduce((total, product) => {
-      return total + product.price + product.amount;
+      return total + product.price * product.amount;
     }, 0)
   ),
 });
