@@ -20,3 +20,5 @@ yarn add reactotron-redux-saga
 yarn add react-toastify
 
 yarn add history
+
+yarn add eslintplugin-react-hooks -D
