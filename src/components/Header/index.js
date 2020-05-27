@@ -18,7 +18,7 @@ export default function Header() {
       <Cart to="/cart">
         <div>
           <strong>Meu Carrinho</strong>
-          <strong>{cartSize} itens</strong>
+          <span>{cartSize} itens</span>
         </div>
         <MdShoppingBasket size={36} color="#FFF" />
       </Cart>
